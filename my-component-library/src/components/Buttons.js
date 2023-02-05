@@ -11,6 +11,28 @@ const BUTTON_MODIFIERS = {
     font-size: ${typeScale.h5};
     padding: 16px 24px;
   `,
+  warning: () => `
+    background: ${defaultTheme.status.warningColor};;
+    color: ${defaultTheme.textColorInverted};
+
+    &:hover, &:focus {
+      background: ${defaultTheme.status.warningColorHover};
+      outline: 3px solid ${defaultTheme.status.warningColorHover};
+    }
+
+    &:active {
+      background: ${defaultTheme.status.warningColorActive};
+    }
+  `,
+  secondaryButtonWarning: () => `
+    background: none;
+    border: 2px solid ${defaultTheme.status.warningColor};
+    color: ${defaultTheme.status.warningColor};
+  `,
+  tertiaryButtonWarning: () => `
+    background: none;
+    color: ${defaultTheme.status.warningColor};
+  `,
 };
 
 const Button = styled.button`
@@ -23,18 +45,18 @@ const Button = styled.button`
   transition: background 0.2s linear, color 0.2s linear;
 
   &:hover {
-    background: ${defaultTheme.primaryHoverColor};
+    background: ${defaultTheme.primaryColorHover};
     color: ${defaultTheme.textColorOnPrimary};
   }
 
   &:focus {
-    ouline: 3px solid ${defaultTheme.primaryHoverColor};
+    ouline: 3px solid ${defaultTheme.primaryColorHover};
     outline-offset: 2px;
   }
 
   &:active {
-    background: ${defaultTheme.primaryActiveColor};
-    border-color: ${defaultTheme.primaryActiveColor};
+    background: ${defaultTheme.primaryColorActive};
+    border-color: ${defaultTheme.primaryColorActive};
     color: ${defaultTheme.textColorOnPrimary};
   }
 `;
