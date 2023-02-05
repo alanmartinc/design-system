@@ -4,19 +4,22 @@ import { normalize } from "polished";
 
 export const GlobalStyle = createGlobalStyle`
     ${normalize()}
+
     html {
-        font-size: 16px;
         box-sizing: border-box;
+        font-size: 16px;
     }
 
     *, *:before, *:after {
         box-sizing: inherit;
-    } 
+    }
 
     body {
         margin: 0;
-        font-family: ${primaryFont};
-        padding: 150px;
+        padding: 65px 0 0;
+        font-family: ${primaryFont}
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     main {

@@ -8,5 +8,5 @@ export const typeScale = {
   header5: "1.1rem",
   paragraph: "1rem",
   helperText: "0.8rem",
-  copyrightText: "0.7rem",
+  copyrightText: "0.7rem"
 };
